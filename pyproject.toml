@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interactive-physics-simulations"
+version = "0.1.0"
+description = "A collection of physics simulations and visualisations built with Python."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Sahil Neela" }
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "sympy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
