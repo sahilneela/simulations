@@ -1,3 +1,4 @@
+from simulations.visualisations.spring_mass import create_spring_mass_visualisations
 from simulations.systems.spring_mass import SpringMassSystem, solve_spring_mass
 
 def main() -> None:
@@ -19,11 +20,21 @@ def main() -> None:
     position = solution.y[0]
     velocity = solution.y[1]
 
+    output_paths = create_spring_mass_visualisations(
+        system=system,
+        solution=solution,
+        output_dir="assets/spring_mass",
+    )
+
     print("Spring-mass simulation complete.")
     print(f"Frames: {len(solution.t)}")
     print(f"Final position: {position[-1]:.4f} m")
     print(f"Final velocity: {velocity[-1]:.4f} m/s")
     print(f"Equilibrium position: {system.equilibrium_position():.4f}")
+
+    print("\nGenerated visualisations:")
+    for output_path in output_paths:
+        print(f"- {output_path}")
 
 if __name__ == "__main__":
     main()
