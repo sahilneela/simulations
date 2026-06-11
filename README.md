@@ -26,13 +26,14 @@ Final position: -0.4640 m
 Final velocity: -0.0854 m/s
 Equilibrium position: -0.4900
 ```
-Features:
 
-- Numerical ODE solving with SciPy
+#### Planned Visualisations
+The spring-mass oscillator will be expanded with:
+
 - Spring-mass animation
-- Phase-space visualisation
-- Time-domain visualisation
-- Configurable physical parameters
+- Phase-space diagram showing position vs velocity
+- Time-domain plot showing displacement and velocity over time
+- Energy plot showing kinetic, potential, and total energy 
 
 ## Planned Simulations
 
@@ -41,7 +42,6 @@ Features:
 - N-body gravity simulation
 - Wave equation visualisation
 - Heat equation visualisation
-- Boids / flocking simulation
 
 ## Project Goals
 
@@ -72,3 +72,4 @@ Run the spring-mass demo:
 ```bash
 python examples/spring_mass_demo.py
 ```
+
