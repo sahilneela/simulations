@@ -120,7 +120,7 @@ def create_spring_mass_visualisations(
     output_dir = Path(output_dir)
 
     return [
-        plot_time_domain(solution, output_dir / "spring_mass_time_domain.png"),
-        plot_phase_space(solution, output_dir / "spring_mass_phase_space.png"), 
-        plot_energy(system, solution, output_dir / "spring_mass_energy.png"),
+        plot_time_domain(solution, output_dir / "time_domain.png"),
+        plot_phase_space(solution, output_dir / "phase_space.png"), 
+        plot_energy(system, solution, output_dir / "energy.png"),
     ]
