@@ -15,7 +15,6 @@ A growing collection of physics simulations and visualisations built with Python
 - [Usage](#usage)
 - [Project Goals](#project-goals)
 - [Roadmap](#roadmap)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Overview
