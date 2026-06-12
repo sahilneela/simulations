@@ -1,13 +1,9 @@
 from simulations.visualisations.spring_mass import create_spring_mass_visualisations
 from simulations.systems.spring_mass import SpringMassSystem, solve_spring_mass
 
+
 def main() -> None:
-    system = SpringMassSystem(
-        mass = 1.0,
-        spring_constant=20.0,
-        damping=0.55,
-        gravity=-9.8
-    )
+    system = SpringMassSystem(mass=1.0, spring_constant=20.0, damping=0.55, gravity=-9.8)
 
     solution = solve_spring_mass(
         system=system,
@@ -35,6 +31,7 @@ def main() -> None:
     print("\nGenerated visualisations:")
     for output_path in output_paths:
         print(f"- {output_path}")
+
 
 if __name__ == "__main__":
     main()

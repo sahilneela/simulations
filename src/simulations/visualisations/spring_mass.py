@@ -122,16 +122,15 @@ def create_spring_mass_visualisations(
     ]
 
     if include_animation:
-        output_paths.append(
-            animate_spring_mass(solution, output_dir / "animation.gif")
-        )
-    
+        output_paths.append(animate_spring_mass(solution, output_dir / "animation.gif"))
+
     return output_paths
 
+
 def animate_spring_mass(
-        solution: Any,
-        output_path: str | Path,
-        fps: int = 30,
+    solution: Any,
+    output_path: str | Path,
+    fps: int = 30,
 ) -> Path:
     """Create a GIF animation of the spring-mass motion."""
 
@@ -142,7 +141,7 @@ def animate_spring_mass(
     max_position = float(position.max())
     padding = 0.2 * max(abs(min_position), abs(max_position), 1.0)
 
-    fig, ax = plt.subplots(figsize = (5, 7))
+    fig, ax = plt.subplots(figsize=(5, 7))
 
     ax.set_xlim(-1.0, 1.0)
     ax.set_ylim(min_position - padding, max_position + padding)
@@ -152,8 +151,8 @@ def animate_spring_mass(
     ax.grid(True)
 
     ceiling_y = max_position + padding * 0.5
-    mass_marker, = ax.plot([], [], marker="o", markersize=10, zorder=2.5)
-    spring_line, = ax.plot([], [], linewidth=2, color = 'red')
+    (mass_marker,) = ax.plot([], [], marker="o", markersize=10, zorder=2.5)
+    (spring_line,) = ax.plot([], [], linewidth=2, color="red")
     time_text = ax.text(
         0.05,
         0.95,
@@ -170,9 +169,9 @@ def animate_spring_mass(
         time_text.set_text(f"t = {time[frame]:.2f} s")
 
         return spring_line, mass_marker, time_text
-    
+
     animation = FuncAnimation(
-        fig, 
+        fig,
         update,
         frames=len(time),
         interval=1000 / fps,

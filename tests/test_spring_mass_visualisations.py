@@ -1,6 +1,7 @@
 from simulations.systems.spring_mass import SpringMassSystem, solve_spring_mass
 from simulations.visualisations.spring_mass import create_spring_mass_visualisations
 
+
 def test_spring_mass_visualisations_are_created(tmp_path):
     system = SpringMassSystem()
     solution = solve_spring_mass(system, duration=1.0, fps=10)

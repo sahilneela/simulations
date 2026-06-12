@@ -30,9 +30,7 @@ class SpringMassSystem:
         position, velocity = state
 
         acceleration = (
-            self.mass * self.gravity
-            - self.damping * velocity
-            - self.spring_constant * position
+            self.mass * self.gravity - self.damping * velocity - self.spring_constant * position
         ) / self.mass
 
         return [velocity, acceleration]
