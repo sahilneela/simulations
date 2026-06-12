@@ -2,7 +2,9 @@
 
 A damped spring-mass system modelled as a second-order ODE and solved numerically.
 
-![Animation](../assets/spring_mass/animation.gif)
+<p align="center">
+    <img src="../assets/spring_mass/animation.gif" alt="Spring-mass animation">
+</p>
 
 | Time-domain response | Phase-space diagram | Energy over time |
 |---|---|---|
